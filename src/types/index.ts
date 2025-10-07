@@ -3,7 +3,8 @@ export interface User {
   name: string;
   email: string;
   tenant_id: string;
-  role: 'admin' | 'manager' | 'worker';
+  tenant_name: string;
+  role: string;
 }
 
 export interface Tenant {

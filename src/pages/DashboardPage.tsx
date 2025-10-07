@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import SystemCard from '../components/ui/SystemCard';
 import ParticlesBackground from '../components/ui/ParticlesBackground';
 import { authService } from '../services/authService';
 
@@ -13,7 +12,6 @@ interface System {
   icon: string;
   color: string;
   hasAccess: boolean;
-  userRole: string;
   lastAccess?: string;
 }
 

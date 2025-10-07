@@ -14,55 +14,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [systems, setSystems] = useState<System[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Mock data para desarrollo
-  const mockSystems: System[] = [
-    {
-      id: '1',
-      name: 'Bitacoras Laborales',
-      code: 'sigesla',
-      description: 'Sistema de Gestión de Bitacoras Laborales',
-      url: 'https://sigesla.tudominio.com',
-      icon: 'BuildingOfficeIcon',
-      color: 'blue',
-      hasAccess: true,
-      lastAccess: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString() // 2 horas atrás
-    },
-    {
-      id: '2',
-      name: 'Demandas Laborales',
-      code: 'demandas',
-      description: 'Sistema de Gestión de Demandas Laborales',
-      url: 'https://demandas.tudominio.com',
-      icon: 'DocumentTextIcon',
-      color: 'purple',
-      hasAccess: true,
-      lastAccess: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString() // 1 día atrás
-    },
-    {
-      id: '3',
-      name: 'Reportes',
-      code: 'reportes',
-      description: 'Sistema de Reportes y Analytics',
-      url: 'https://reportes.tudominio.com',
-      icon: 'ChartBarIcon',
-      color: 'green',
-      hasAccess: false // Sin acceso
-    }
-  ];
-
-  const mockUser: User = {
-    id: '1',
-    name: 'María González',
-    email: 'maria.gonzalez@empresa.com',
-    tenant_id: '1',
-    role: 'manager'
-  };
-
-  const mockTenant: Tenant = {
-    id: '1',
-    name: 'Empresa ABC S.A. de C.V.'
-  };
-
   useEffect(() => {
     // Verificar sesión existente
     const checkExistingSession = async () => {
