@@ -1,0 +1,6 @@
+# API Configuration
+VITE_API_URL=http://localhost:3000/api
+
+# Domain Configuration (for cookie sharing between subdomains)
+VITE_APP_DOMAIN=.tudominio.com
+
